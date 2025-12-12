@@ -1,0 +1,78 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define BASE 0
+#define NUM 1
+
+#define COMBO_TIME_OUT 25
+
+/ {
+    
+    keymap {
+        compatible = "zmk,keymap";
+
+        /* Qwerty
+        ┏━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┓          ┏━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┓
+        ┃   1 !   ┃   2 @   ┃    3    ┃    4    ┃    5    ┃          ┃    6    ┃    7    ┃    8    ┃    9    ┃    0    ┃
+        ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+        ┃    Q    ┃    W    ┃    E    ┃    R    ┃    T    ┃          ┃    Y    ┃    U    ┃    I    ┃    O    ┃    P    ┃
+        ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+        ┃    A    ┃    S    ┃    D    ┃    F    ┃    G    ┃          ┃    H    ┃    J    ┃    K    ┃    L    ┃   BSPC  ┃
+        ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+        ┃SHIFT  Z ┃    X    ┃    C    ┃    V    ┃    B    ┃          ┃    N    ┃    M    ┃    ,    ┃    .    ┃SHIFT /  ┃
+        ┗━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┛
+                  ┃  WIN    ┃  HOME   ┃   INS   ┃CTRL/ENTR┃          ┃  SPACE  ┃  PG_UP  ┃    UP   ┃  PG_DN  ┃
+                  ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+                  ┃  LALT   ┃  END    ┃   DEL   ┃ TempNUM ┃          ┃ TO NUM  ┃   LEFT  ┃   DOWN  ┃  RIGHT  ┃
+                  ┗━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┣━━━━━━━━━┫          ┣━━━━━━━━━┫━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┛
+                                                ┃   TAB   ┃          ┃   ESC   ┃
+                                                ┗━━━━━━━━━┛          ┗━━━━━━━━━┛
+        */
+
+        base {
+            label = "BASE";
+            bindings = <
+                &kp N1      &kp N2      &kp N3          &kp N4          &kp N5                              &kp N6      &kp N7          &kp N8          &kp N9          &kp N0
+                &kp Q       &kp W       &kp E           &kp R           &kp T                               &kp Y       &kp U           &kp I           &kp O           &kp P
+                &kp A       &kp S       &kp D           &kp F           &kp G                               &kp H       &kp J           &kp K           &kp L           &kp BSPC
+                &lt LSHFT Z &kp X       &kp C           &kp V           &kp B                               &kp N       &kp M           &kp COMMA       &kp DOT         &lt RSHFT FSLH
+                            &kp LGUI    &kp HOME        &kp INSERT      &sl NUM                             &kp SPACE   &kp PG_UP       &kp UP_ARROW    &kp PG_DN
+                            &to LALT    &kp END         &kp DELETE      &lt LCTRL ENTER                     &to NUM     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                                                                        &kp TAB                             &kp ESC
+            >;
+        };
+
+        /* Numbers
+        ┏━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┓          ┏━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┓
+        ┃    F1   ┃    F2   ┃   F3    ┃  VOL+   ┃   MUTE  ┃          ┃  NONE   ┃  NONE   ┃  NONE   ┃  NONE   ┃  NONE   ┃
+        ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+        ┃    F4   ┃    F5   ┃    F6   ┃  VOL-   ┃    +    ┃          ┃   = +   ┃    7    ┃    8    ┃    9    ┃  ENTER  ┃
+        ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+        ┃    F7   ┃    F8   ┃    F9   ┃   \ |   ┃  - _    ┃          ┃    .    ┃    4    ┃    5    ┃    6    ┃   BSPC  ┃
+        ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+        ┃   F10   ┃   F11   ┃   F12   ┃    /    ┃    *    ┃          ┃    0    ┃    1    ┃    2    ┃    3    ┃   ESC   ┃
+        ┗━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┛
+                  ┃  NONE   ┃  NONE   ┃  NONE   ┃ TO BASE ┃          ┃  SHIFT  ┃   {     ┃     }   ┃    '    ┃
+                  ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+                  ┃  NONE   ┃  NONE   ┃  NONE   ┃  NONE   ┃          ┃   NONE  ┃   ` ~   ┃   NONE  ┃    ;    ┃
+                  ┗━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┣━━━━━━━━━┫          ┣━━━━━━━━━┫━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┛
+                                                ┃  NONE   ┃          ┃   CAPS  ┃
+                                                ┗━━━━━━━━━┛          ┗━━━━━━━━━┛
+        */
+
+        number {
+            label = "Numbers";
+            bindings = <
+                &kp F1  &kp F2      &kp F3          &kp C_VOL_UP    &kp C_MUTE                          &none       &none           &none           &none           &none
+                &kp F4  &kp F5      &kp F6          &kp C_VOL_DN    &kp T                               &kp EQUAL   &kp N7          &kp N8          &kp N9          &kp ENTER
+                &kp F7  &kp F8      &kp F9          &kp BSLH        &kp MINUS                           &kp KP_DOT  &kp N4          &kp N5          &kp N6          &kp BSPC
+                &kp F10 &kp F11     &kp F12         &kp KP_SLASH    &kp KP_ASTERISK                     &kp N0      &kp N1          &kp N2          &kp N3          &kp ESC
+                        &none       &none           &none           &to BASE                            &kp LSHIFT  &kp LBKT        &kp RBKT        &kp SQT
+                        &none       &none           &none           &none                               &to NUM     &kp GRAVE       &none           &kp SEMI
+                                                                    &none                               &kp ESC
+            >;
+        };
+    };
+};
