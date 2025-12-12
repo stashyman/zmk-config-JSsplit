@@ -4,11 +4,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: joaopedropio                          # <--- add these
+      url-base: https://github.com/joaopedropio   # <---
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: snake-module                          # <--- and these
+      remote: joaopedropio                        # <---
+      revision: master                            # <---
   self:
     path: config

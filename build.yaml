@@ -18,8 +18,8 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
-board: [ "nice_nano_v2" ]
-shield: [ "central_dongle", "JSsplit_left", "JSsplit_right" ]
+#board: [ "nice_nano_v2" ]
+#shield: [ "central_dongle", "JSsplit_left", "JSsplit_right" ]
 include:
   - board: nice_nano_v2
     shield: central_dongle snake_adapter
