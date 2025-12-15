@@ -38,8 +38,8 @@
                 &kp Q       &kp W       &kp E           &kp R           &kp T                               &kp Y       &kp U           &kp I           &kp O           &kp P
                 &kp A       &kp S       &kp D           &kp F           &kp G                               &kp H       &kp J           &kp K           &kp L           &kp BSPC
                 &lt LSHFT Z &kp X       &kp C           &kp V           &kp B                               &kp N       &kp M           &kp COMMA       &kp DOT         &lt RSHFT FSLH
-                            &kp LGUI    &kp HOME        &kp INSERT      &sl NUM                             &kp SPACE   &kp PG_UP       &kp UP_ARROW    &kp PG_DN
-                            &to LALT    &kp END         &kp DELETE      &lt LCTRL ENTER                     &to NUM     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                            &kp LGUI    &kp HOME        &kp INSERT      &lt LCTRL ENTER                     &kp SPACE   &kp PG_UP       &kp UP_ARROW    &kp PG_DN
+                            &to LALT    &kp END         &kp DELETE      &sl NUM                             &to NUM     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
                                                                         &kp TAB                             &kp ESC
             >;
         };
