@@ -1,3 +1,4 @@
+#include <physical_layouts.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 
 
@@ -10,7 +11,22 @@
         zmk,physical-layout = &physical_layout0;
     };
 
-	default_transform: keymap_transform_0 {
+	kscan0: kscan {        
+		compatible = "zmk,kscan-gpio-matrix";
+		label = "KSCAN";
+
+		diode-direction = "col2row";
+		
+		row-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+					<&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+					<&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+					<&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+					<&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    };	
+
+	default_transform: matrix_transform {
 		compatible = "zmk,matrix-transform";
 		columns = <10>;
 		rows = <7>;
@@ -26,26 +42,12 @@
 		>;
 	};
 
-	kscan0: kscan {        
-		compatible = "zmk,kscan-gpio-matrix";
-		label = "KSCAN";
-
-		diode-direction = "col2row";
-		
-		row-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-					<&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-					<&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-					<&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-					<&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-    };
-	 physical_layout0: physical_layout_0 {
+	physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "JS Split Keyboard";
-
+		default_transform = <&transform>;
         kscan = <&kscan0>;
-        transform = <&matrix_transform0>;
+        
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100  200    0    1000   550 (-90)>
