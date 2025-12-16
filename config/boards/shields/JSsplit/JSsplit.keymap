@@ -5,6 +5,9 @@
 
 #define BASE 0
 #define NUM 1
+#define extra1 2
+#define extra2 3
+#define extra3 4
 
 #define COMBO_TIME_OUT 25
 
@@ -25,7 +28,7 @@
         ┗━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┛
                   ┃  WIN    ┃  HOME   ┃   INS   ┃CTRL/ENTR┃          ┃  SPACE  ┃  PG_UP  ┃    UP   ┃  PG_DN  ┃
                   ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
-                  ┃  LALT   ┃  END    ┃   DEL   ┃ TempNUM ┃          ┃ TO NUM  ┃   LEFT  ┃   DOWN  ┃  RIGHT  ┃
+                  ┃  LALT   ┃   END   ┃   DEL   ┃ TempNUM ┃          ┃ TO NUM  ┃   LEFT  ┃   DOWN  ┃  RIGHT  ┃
                   ┗━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┣━━━━━━━━━┫          ┣━━━━━━━━━┫━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┛
                                                 ┃   TAB   ┃          ┃   ESC   ┃
                                                 ┗━━━━━━━━━┛          ┗━━━━━━━━━┛
@@ -39,7 +42,7 @@
                 &kp A       &kp S       &kp D           &kp F           &kp G                               &kp H       &kp J           &kp K           &kp L           &kp BSPC
                 &mt LSHFT Z &kp X       &kp C           &kp V           &kp B                               &kp N       &kp M           &kp COMMA       &kp DOT         &mt RSHFT FSLH
                             &kp LGUI    &kp HOME        &kp INSERT      &mt LCTRL ENTER                     &kp SPACE   &kp PG_UP       &kp UP_ARROW    &kp PG_DN
-                            &to LALT    &kp END         &kp DELETE      &sl NUM                             &to NUM     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                            &kp LALT    &kp END         &kp DELETE      &sl NUM                             &to NUM     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
                                                                         &kp TAB                             &kp ESC
             >;
         };
@@ -56,9 +59,9 @@
         ┗━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┛
                   ┃  NONE   ┃  NONE   ┃  NONE   ┃ TO BASE ┃          ┃  SHIFT  ┃   {     ┃     }   ┃    '    ┃
                   ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
-                  ┃  NONE   ┃  NONE   ┃  NONE   ┃  NONE   ┃          ┃   NONE  ┃   ` ~   ┃   NONE  ┃    ;    ┃
+                  ┃  NONE   ┃  NONE   ┃  NONE   ┃  NONE   ┃          ┃   BASE  ┃   ` ~   ┃   CAPS  ┃    ;    ┃
                   ┗━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┣━━━━━━━━━┫          ┣━━━━━━━━━┫━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┛
-                                                ┃  NONE   ┃          ┃   CAPS  ┃
+                                                ┃  BOOT   ┃          ┃   BOOT  ┃
                                                 ┗━━━━━━━━━┛          ┗━━━━━━━━━┛
         */
 
@@ -70,9 +73,22 @@
                 &kp F7  &kp F8      &kp F9          &kp BSLH        &kp MINUS                           &kp KP_DOT  &kp N4          &kp N5          &kp N6          &kp BSPC
                 &kp F10 &kp F11     &kp F12         &kp KP_SLASH    &kp KP_ASTERISK                     &kp N0      &kp N1          &kp N2          &kp N3          &kp ESC
                         &none       &none           &none           &to BASE                            &kp LSHIFT  &kp LBKT        &kp RBKT        &kp SQT
-                        &none       &none           &none           &none                               &to BASE    &kp GRAVE       &none           &kp SEMI
-                                                                    &none                               &kp CAPS
+                        &none       &none           &none           &none                               &to BASE    &kp GRAVE       &kp CAPS        &kp SEMI
+                                                                    &bootloader                         &bootloader
             >;
         };
+
+        extra1 {
+            status = "reserved";
+        };
+
+        extra2 {
+            status = "reserved";
+        };
+
+        extra3 {
+            status = "reserved";
+        };
+
     };
 };
