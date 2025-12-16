@@ -25,7 +25,7 @@ include:
     shield: central_dongle snake_adapter
     artifact-name: snake_dongle
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    #cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano_v2
     shield: JSsplit_left
     artifact-name: JSsplit_left
