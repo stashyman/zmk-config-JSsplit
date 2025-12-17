@@ -7,7 +7,6 @@
 #define NUM 1
 #define extra1 2
 #define extra2 3
-#define extra3 4
 
 #define COMBO_TIME_OUT 25
 
@@ -83,10 +82,6 @@
         };
 
         extra2 {
-            status = "reserved";
-        };
-
-        extra3 {
             status = "reserved";
         };
 
