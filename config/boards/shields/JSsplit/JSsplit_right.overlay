@@ -11,14 +11,3 @@
                 <&pro_micro 8 GPIO_ACTIVE_HIGH>,
                 <&pro_micro 9 GPIO_ACTIVE_HIGH>;
 };
-
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_pim447>;
-    };
-    
-    JSsplit_right {
-        compatible = "zmk,input-split-device";
-    };
-};
