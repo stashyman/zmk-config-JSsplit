@@ -11,35 +11,3 @@
                 <&pro_micro 8 GPIO_ACTIVE_HIGH>,
                 <&pro_micro 9 GPIO_ACTIVE_HIGH>;
 };
-
-&i2c0 {
-    status = "okay";
-    
-    trackball_pim447: trackball@0A {
-        compatible = "pimoroni,trackball_pim447";
-        reg = <0x0A>;
-        sensitivity = <64>;  /* Range: 1-255 */
-        move-factor = <2>;   /* Range: 1-10, scales cursor movement speed */
-        scroll-factor = <1>; /* Range: 1-10, scales scrolling speed */
-        
-        /* Optional LED color (RGB values 0-255) */
-        led-red = <255>;
-        led-green = <0>;
-        led-blue = <0>;
-        
-        /* Optional axis inversion */
-        /* invert-x; */  /* Uncomment to invert X axis */
-        /* invert-y; */  /* Uncomment to invert Y axis */
-    };
-};
-
-/ {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_pim447>;
-    };
-    
-    JSsplit_right {
-        compatible = "zmk,input-split-device";
-    };
-};
