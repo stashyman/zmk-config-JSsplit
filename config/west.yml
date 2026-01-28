@@ -17,9 +17,6 @@ manifest:
     - name: snake-module                          # <--- and these
       remote: joaopedropio                        # <---
       revision: master                            # <---
-    - name: zmk-driver-pim447                     # <--- and these for the trackball
-      remote: mwandzik                            # <---
-      revision: main                            # <---
       #revision: f89b9927e15f37b20f4bffa57d1489ac445ff37b     # <--- This one was working, the one above is the newest version with more boxes
   self:
     path: config
