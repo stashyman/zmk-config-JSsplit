@@ -35,4 +35,8 @@
         rows = <0>;
         events = <0>;
     };
+
+    central_dongle {
+        compatible = "zmk,input-split-device";
+    };
 };
