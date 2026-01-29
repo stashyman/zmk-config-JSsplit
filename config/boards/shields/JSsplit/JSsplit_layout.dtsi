@@ -126,5 +126,16 @@
             , <&key_physical_attrs 100 100  900  567 (-1000)   550 (-90)>
             , <&key_physical_attrs 100 100 1000  567 (-1000)   550 (-90)>
             ;*/
+    // Define the listener node for the PIM447 trackball
+     pim447_listener: pim447_listener {
+         compatible = "zmk,input-listener";
+         status = "disabled"; // Disabled by default, enabled on central side
+     };
+ 
+     // Input split driver needed for peripheral pointing devices
+     input_split: input_split {
+         compatible = "zmk,input-split-driver";
+         status = "disabled"; // Disabled by default, enabled in overlays
+     };
     };
 };
