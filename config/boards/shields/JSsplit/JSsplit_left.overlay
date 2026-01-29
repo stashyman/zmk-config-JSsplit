@@ -7,3 +7,9 @@
                 <&pro_micro 8 GPIO_ACTIVE_HIGH>,
                 <&pro_micro 9 GPIO_ACTIVE_HIGH>;
 };
+
+// Enable the PIM447 listener on the central side
+&pim447_listener {
+    status = "okay";
+    device = <&trackball>; // Point listener to the trackball device
+};
