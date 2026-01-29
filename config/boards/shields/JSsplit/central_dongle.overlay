@@ -35,4 +35,8 @@
         rows = <0>;
         events = <0>;
     };
+
+    left_split_device {
+        compatible = "zmk,input-split-device";
+    };
 };
