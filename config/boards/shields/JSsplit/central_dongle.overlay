@@ -5,6 +5,11 @@
     transform = <&default_transform>;
 };
 
+&pim447_listener {
+    status = "okay";
+    device = <&trackball>; // Point listener to the trackball device
+};
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;

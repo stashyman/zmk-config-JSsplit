@@ -42,4 +42,7 @@ if SHIELD_CENTRAL_DONGLE || SHIELD_JSSPLIT_LEFT || SHIELD_JSSPLIT_RIGHT
 config ZMK_SPLIT
     default y
 
+config I2C
+    default y
+
 endif

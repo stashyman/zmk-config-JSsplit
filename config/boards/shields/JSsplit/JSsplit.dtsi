@@ -5,11 +5,35 @@
     transform = <&default_transform>;
 };
 
+&pro_micro_i2c {
+     status = "okay";
+ 
+     // Define the trackball node, disabled by default
+     trackball: pim447@a {
+         compatible = "pimoroni,pim447";
+         reg = <0x0A>;
+         status = "disabled"; // Disabled here, enabled in right overlay
+         int-gpios = <&pro_micro 3 GPIO_ACTIVE_LOW>;
+     };
+};
+
 / {
 	chosen {
 		zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout0;
 	};
+
+	// Define the listener node for the PIM447 trackball
+     pim447_listener: pim447_listener {
+         compatible = "zmk,input-listener";
+         status = "disabled"; // Disabled by default, enabled on central side
+     };
+ 
+     // Input split driver needed for peripheral pointing devices
+     input_split: input_split {
+         compatible = "zmk,input-split-driver";
+         status = "disabled"; // Disabled by default, enabled in overlays
+     };
 
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";

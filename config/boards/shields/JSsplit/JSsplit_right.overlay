@@ -11,3 +11,13 @@
                 <&pro_micro 8 GPIO_ACTIVE_HIGH>,
                 <&pro_micro 9 GPIO_ACTIVE_HIGH>;
 };
+
+// Restore correct nested structure for I2C and trackball enablement
+&pro_micro_i2c {
+    /* Explicitly reference the trackball node, rely on default pins from .dtsi */
+    trackball: pim447@a {
+        status = "okay";
+        /* int-gpios will use default <&pro_micro 3> from .dtsi */
+        /* I2C pins (sda/scl) will use defaults from board/dtsi */
+    };
+};
