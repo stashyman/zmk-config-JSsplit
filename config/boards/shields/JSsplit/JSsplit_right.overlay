@@ -60,7 +60,7 @@
 &i2c0 {
 	status = "okay";
 	
-	trackball_pim447: trackball@0A {
+	trackball_pim447: trackball@0a {
 		compatible = "pimoroni,trackball_pim447";
 		reg = <0x0A>;
 		sensitivity = <64>;  /* Range: 1-255 */
