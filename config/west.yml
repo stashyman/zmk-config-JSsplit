@@ -22,9 +22,9 @@ manifest:
       #remote: pimoroni_trackball
       #url: https://github.com/mwandzik/zmk-driver-pim447
       #revision: master
-    - name: zmk-driver-pim447
-      remote: mwandzik
+  #  - name: zmk-driver-pim447
+  #    remote: mwandzik
       #url: https://github.com/mwandzik/
-      revision: master
+  #    revision: master
   self:
     path: config
