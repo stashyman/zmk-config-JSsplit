@@ -7,3 +7,9 @@
                 <&pro_micro 8 GPIO_ACTIVE_HIGH>,
                 <&pro_micro 9 GPIO_ACTIVE_HIGH>;
 };
+
+/ {
+	left_split_device {
+        compatible = "zmk,input-split-device";
+    };
+};

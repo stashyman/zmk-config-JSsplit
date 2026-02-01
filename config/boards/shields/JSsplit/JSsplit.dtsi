@@ -11,15 +11,6 @@
         zmk,physical-layout = &physical_layout0;
 	};
 
-	trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_pim447>;
-    };
-    
-    right_split_device {
-        compatible = "zmk,input-split-device";
-    };
-
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
 		columns = <10>;
