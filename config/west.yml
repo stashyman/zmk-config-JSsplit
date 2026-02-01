@@ -23,7 +23,8 @@ manifest:
       #url: https://github.com/mwandzik/zmk-driver-pim447
       #revision: master
     - name: zmk-driver-pim447
-      #remote: mwandzik
+      remote: mwandzik
+      url: https://github.com/mwandzik/
       revision: master
   self:
     path: config
