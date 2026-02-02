@@ -44,7 +44,7 @@
 		>;
 	};
 
-	kscan0: kscan {        
+	/*kscan0: kscan {        
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
 
@@ -57,6 +57,6 @@
                     <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
 					<&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-    };
+    };*/
 
 };
