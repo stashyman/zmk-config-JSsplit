@@ -82,19 +82,6 @@ endchoice
 
 endif
 
-if SHIELD_CENTRAL_DONGLE || SHIELD_JSSPLIT_LEFT || SHIELD_JSSPLIT_RIGHT
-
-config ZMK_SPLIT
-    default y
-
-config I2C
-    default y
-
-config ZMK_POINTING
-    default y
-
-endif
-
 # ---------------------
 # Kconfig for shield "jssplit_right" with board "nice_nano_v2"
 # ---------------------
