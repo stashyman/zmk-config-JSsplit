@@ -4,7 +4,12 @@
     col-offset = <5>;
 };
 
-&kscan0 {
+&physical_layout0 {
+    kscan = <&kscan0>;
+};
+
+/ {
+    kscan0: kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
 	label = "KSCAN";
 
@@ -23,6 +28,7 @@
                 <&pro_micro 7 GPIO_ACTIVE_HIGH>,
                 <&pro_micro 8 GPIO_ACTIVE_HIGH>,
                 <&pro_micro 9 GPIO_ACTIVE_HIGH>;
+    };
 };
 
 // == Input devices ==
