@@ -5,6 +5,12 @@
     transform = <&default_transform>;
 };
 
+// == Input devices ==
+// Input devices on peripheral parts
+// Enabling input listeners and input-split to receive input events from peripherals
+&input_split_right0 { status = "okay"; };
+&input_listener_right0 { status = "okay"; };
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
@@ -34,9 +40,5 @@
         columns = <0>;
         rows = <0>;
         events = <0>;
-    };
-
-    left_split_device {
-        compatible = "zmk,input-split-device";
     };
 };
