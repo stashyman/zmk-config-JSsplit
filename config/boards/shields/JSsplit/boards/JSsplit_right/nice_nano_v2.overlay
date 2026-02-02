@@ -37,9 +37,9 @@
 };
 
 // devices on i2c0
-
+//trackball_pim447: trackball@0A
 &i2c0 {
-    trackball_pim447: trackball@0A {
+    input_device_right0: trackball@0A {
         status = "okay";
         //compatible = "cirque,pinnacle";
         //reg = <0x2a>;
