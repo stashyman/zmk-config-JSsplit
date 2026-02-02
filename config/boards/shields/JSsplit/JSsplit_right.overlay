@@ -36,5 +36,5 @@
 // Adding input devices and assigning them to input-split
 &input_split_right0 {
     status = "okay";
-    device = <&trackball_pim447>;
+    device = <&input_device_right0>;
 };
