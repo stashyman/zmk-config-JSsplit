@@ -39,7 +39,7 @@
 // devices on i2c0
 //trackball_pim447: trackball@0A
 &i2c0 {
-    input_device_right0: input_device_right0@0a {
+    input_device_right0: input_device_right0@a {
         status = "okay";
         //compatible = "cirque,pinnacle";
         //reg = <0x2a>;
@@ -49,7 +49,7 @@
         //no-taps;
         //sensitivity = "2x";
         compatible = "pimoroni,trackball_pim447";
-        reg = <0x0A>;
+        reg = <0xa>;
         sensitivity = <64>;  /* Range: 1-255 */
         move-factor = <2>;   /* Range: 1-10, scales cursor movement speed */
         scroll-factor = <1>; /* Range: 1-10, scales scrolling speed */
