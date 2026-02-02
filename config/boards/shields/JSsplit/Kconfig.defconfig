@@ -48,6 +48,8 @@ config I2C
 config ZMK_POINTING
     default y
 
+endif
+
 # ---------------------
 # Kconfig for shield "jssplit_right" with board "nice_nano_v2"
 # ---------------------
