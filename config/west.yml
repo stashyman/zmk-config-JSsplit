@@ -6,8 +6,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: joaopedropio                          # <--- add these
       url-base: https://github.com/joaopedropio   # <---
-    - name: mwandzik
-      url-base: https://github.com/mwandzik/
+    #- name: mwandzik
+    #  url-base: https://github.com/mwandzik/
+    - name: Qolera
+      url-base: https://github.com/Qolera/
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -22,9 +24,13 @@ manifest:
       #remote: pimoroni_trackball
       #url: https://github.com/mwandzik/zmk-driver-pim447
       #revision: master
-    - name: zmk-driver-pim447
+    #- name: zmk-driver-pim447
   #    remote: mwandzik
-      url: https://github.com/mwandzik/
+      #url: https://github.com/mwandzik/
+      #revision: master
+    - name: Sofle-pim447
+      remote: Qolera
+      #url: https://github.com/mwandzik/
       revision: master
   self:
     path: config
