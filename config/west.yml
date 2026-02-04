@@ -6,10 +6,11 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: joaopedropio                          # <--- add these
       url-base: https://github.com/joaopedropio   # <---
-    - name: mwandzik
-      url-base: https://github.com/mwandzik/
     - name: genteure
-      url-base: https://github.com/Genteure  
+      url-base: https://github.com/Genteure
+    - name: stashyman
+      url-base: https://github.com/stashyman/
+      
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -21,16 +22,12 @@ manifest:
       revision: master                            # <---
       #revision: f89b9927e15f37b20f4bffa57d1489ac445ff37b     # <--- This one was working, the one above is the newest version with more boxes
     #- name: zmk-driver-pim447
-      #remote: pimoroni_trackball
-      #url: https://github.com/mwandzik/zmk-driver-pim447
-      #revision: master
-    #- name: zmk-driver-pim447
-  #    remote: mwandzik
-    #  url: https://github.com/mwandzik/
-    #  revision: master
-    - name: zmk-driver-pim447
-      remote: genteure
+    #  remote: genteure
       #revision: 38e1297f87c4a4306633356573ae8673dc7e9ecc
-      revision: 3d09ddb19dbf8482d0bb67bb8f6d145c4b997685
+    #  revision: 3d09ddb19dbf8482d0bb67bb8f6d145c4b997685
+    - name: zmk-driver-pim447                   # <--- and these
+      remote: stashyman                         # <---
+      revision: main                            # <---
+
   self:
     path: config
