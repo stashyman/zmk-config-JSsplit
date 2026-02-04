@@ -23,7 +23,8 @@
             compatible = "zmk,behavior-trackball-mode";
             #binding-cells = <1>;
             
-            current_mode = PIM447_MODE_MOUSE; // "MOUSE" : "SCROLL"
+            //current_mode = PIM447_MODE_MOUSE; // "MOUSE" : "SCROLL"
+            PIM447_TOGGLE_MODE;
 
             //pimoroni_pim447_set_leds(dev, 255, 0, 255, 0);
 
