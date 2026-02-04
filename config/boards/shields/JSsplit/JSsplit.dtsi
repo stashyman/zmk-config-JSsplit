@@ -19,6 +19,7 @@
             compatible = "zmk,input-split";
             reg = <0>;
             status = "disabled";
+			input-processors = <&zip_xy_swap_mapper>;
         };
     };
 
