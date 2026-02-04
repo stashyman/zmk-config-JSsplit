@@ -20,6 +20,12 @@
         };
     };
 
+    input_listener_right0 {
+        compatible = "zmk,input-listener";
+        device = <&input_device_right0>;
+        input-processors = <&zip_xy_swap_mapper>; // Swaps X and Y
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
