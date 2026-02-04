@@ -5,7 +5,7 @@ config ZMK_KEYBOARD_NAME
     default "JSsplit"
 
 config ZMK_SPLIT_ROLE_CENTRAL
-    default n
+    default y
 
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
   default 1
