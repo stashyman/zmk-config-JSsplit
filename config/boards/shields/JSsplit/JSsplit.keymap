@@ -25,6 +25,8 @@
             
             current_mode = PIM447_MODE_MOUSE; /* "MOUSE" : "SCROLL" */
 
+            pimoroni_pim447_set_leds(dev, 255, 0, 255, 0);
+
         };
         &tb_mode MOVE_TOGGLE
         */

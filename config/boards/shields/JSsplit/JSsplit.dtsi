@@ -28,7 +28,7 @@
         compatible = "zmk,input-listener";
         status = "disabled";
         device = <&input_split_right0>;
-		input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP) , &zip_xy_scaler 3 2>; // Swaps X and Y
+		input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)> , <&zip_xy_scaler 3 2>; // Swaps X and Y
 		//input-processors = <&zip_xy_swap_mapper>; // Swaps X and Y  - worked but x still needs flipped
 		//input-processors = process-next; //supposed to apply next processors
 		//input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>;
