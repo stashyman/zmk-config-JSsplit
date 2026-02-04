@@ -9,7 +9,7 @@
     kscan = <&kscan0>;
 };
 
-&zip_xy_swap_mapper;
+&zip_xy_swap_mapper
 
 / {
     kscan0: kscan0 {
