@@ -44,7 +44,7 @@
 // devices on i2c0
 //trackball_pim447: trackball@0A
 &i2c0 {
-    input_device_right0: input_device_right0@a {
+    /*input_device_right0: input_device_right0@a {
         status = "okay";
         //compatible = "cirque,pinnacle";
         //reg = <0x2a>;
@@ -67,5 +67,13 @@
         /* Optional axis inversion */
         /* invert-x; */  /* Uncomment to invert X axis */
         /* invert-y; */  /* Uncomment to invert Y axis */
+        */
+        
+    pimoroni_pim447: input_device_right0: input_device_right0@A {
+        status = "okay";
+        compatible = "zmk,pimoroni-pim447";
+        reg = <0xA>;
+        int-gpios = <&gpio1 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
     };
 };

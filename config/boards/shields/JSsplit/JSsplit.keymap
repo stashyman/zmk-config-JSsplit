@@ -11,7 +11,14 @@
 #define COMBO_TIME_OUT 25
 
 / {
-   
+    
+   behaviors {
+        pim447bh: pim447bh {
+            compatible = "zmk,behavior-pim447";
+            #binding-cells = <1>;
+            
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";

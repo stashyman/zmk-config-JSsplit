@@ -30,6 +30,7 @@ manifest:
     #  revision: master
     - name: zmk-driver-pim447
       remote: genteure
-      revision: 38e1297f87c4a4306633356573ae8673dc7e9ecc
+      #revision: 38e1297f87c4a4306633356573ae8673dc7e9ecc
+      revision: 3d09ddb19dbf8482d0bb67bb8f6d145c4b997685
   self:
     path: config
