@@ -1,5 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "JSsplit_layout.dtsi"
+#include <input/processors.dtsi>
 
 &physical_layout0 {
     transform = <&default_transform>;
@@ -26,6 +27,7 @@
         compatible = "zmk,input-listener";
         status = "disabled";
         device = <&input_split_right0>;
+		input-processors = <&zip_xy_swap_mapper>; // Swaps X and Y 
     };
 
 	default_transform: keymap_transform_0 {
