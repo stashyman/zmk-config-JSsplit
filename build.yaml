@@ -29,10 +29,12 @@ include:
   - board: nice_nano_v2
     shield: JSsplit_left
     artifact-name: JSsplit_left
-  - board: nice_nano_v2
-    shield: JSsplit_left
-    snippet: jssplit-left-as-peripheral
-    artifact-name: jssplit_left_as_peripheral
+
+  #- board: nice_nano_v2
+  #  shield: JSsplit_left
+  #  snippet: jssplit-left-as-peripheral
+  #  artifact-name: jssplit_left_as_peripheral
+
   - board: nice_nano_v2
     shield: JSsplit_right
     artifact-name: JSsplit_right
