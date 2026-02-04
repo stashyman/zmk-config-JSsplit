@@ -29,7 +29,7 @@
         status = "disabled";
         device = <&input_split_right0>;
 		input-processors = <&zip_xy_swap_mapper>; // Swaps X and Y 
-		process-next; //supposed to apply next processors
+		input-processors = process-next; //supposed to apply next processors
 		input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>;
     };
 
