@@ -19,7 +19,6 @@
             compatible = "zmk,input-split";
             reg = <0>;
             status = "disabled";
-			input-processors = <&zip_xy_swap_mapper>;
         };
     };
 
@@ -27,6 +26,7 @@
         compatible = "zmk,input-listener";
         status = "disabled";
         device = <&input_split_right0>;
+		input-processors = <&zip_xy_swap_mapper>;
     };
 
 	default_transform: keymap_transform_0 {
