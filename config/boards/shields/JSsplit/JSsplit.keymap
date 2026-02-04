@@ -22,7 +22,7 @@
         tb_mode: pim447_mode {
             compatible = "zmk,behavior-trackball-mode";
             #binding-cells = <1>;
-            behavior_pim447_binding_pressed(PIM447_TOGGLE_MODE)/
+            behavior_pim447_binding_pressed(PIM447_TOGGLE_MODE);
             //current_mode = PIM447_MODE_MOUSE; // "MOUSE" : "SCROLL"
             //PIM447_TOGGLE_MODE;
 
