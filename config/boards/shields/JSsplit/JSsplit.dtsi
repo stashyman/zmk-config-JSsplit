@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "JSsplit_layout.dtsi"
 #include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 
 &physical_layout0 {
     transform = <&default_transform>;
