@@ -19,18 +19,6 @@
             
         };
         
-        tb_mode: pim447_mode {
-            compatible = "zmk,behavior-trackball-mode";
-            #binding-cells = <1>;
-            behavior_pim447_binding_pressed(PIM447_TOGGLE_MODE);
-            //current_mode = PIM447_MODE_MOUSE; // "MOUSE" : "SCROLL"
-            //PIM447_TOGGLE_MODE;
-
-            //pimoroni_pim447_set_leds(dev, 255, 0, 255, 0);
-
-        };
-        
-        
     };
 
     keymap {
@@ -93,7 +81,7 @@
                 &kp F7  &kp F8      &kp F9          &kp BSLH        &kp MINUS                           &kp DOT     &kp N4          &kp N5          &kp N6          &kp BSPC
                 &kp F10 &kp F11     &kp F12         &kp KP_SLASH    &kp KP_ASTERISK                     &kp N0      &kp N1          &kp N2          &kp N3          &kp ESC
                         &none       &bt BT_SEL 0    &bt BT_CLR      &to BASE                            &kp LSHIFT  &kp LBKT        &kp RBKT        &kp SQT
-                        &tb_mode PIM447_TOGGLE_MODE       &bt BT_SEL 1    &out OUT_TOG    &studio_unlock                      &to BASE    &kp GRAVE       &kp CAPS        &kp SEMI
+                        &none       &bt BT_SEL 1    &out OUT_TOG    &studio_unlock                      &to BASE    &kp GRAVE       &kp CAPS        &kp SEMI
                                                                     &bootloader                         &bootloader
             >;
         };
