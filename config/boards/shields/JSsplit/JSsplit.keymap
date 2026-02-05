@@ -5,7 +5,7 @@
 
 #define BASE 0
 #define NUM 1
-#define extra1 2
+#define MOUSE 2
 #define extra2 3
 
 #define COMBO_TIME_OUT 25
@@ -80,14 +80,41 @@
                 &kp F4  &kp F5      &kp F6          &kp C_VOL_DN    &kp PLUS                            &kp EQUAL   &kp N7          &kp N8          &kp N9          &kp ENTER
                 &kp F7  &kp F8      &kp F9          &kp BSLH        &kp MINUS                           &kp DOT     &kp N4          &kp N5          &kp N6          &kp BSPC
                 &kp F10 &kp F11     &kp F12         &kp KP_SLASH    &kp KP_ASTERISK                     &kp N0      &kp N1          &kp N2          &kp N3          &kp ESC
-                        &none       &bt BT_SEL 0    &bt BT_CLR      &to BASE                            &kp LSHIFT  &kp LBKT        &kp RBKT        &kp SQT
+                        &none       &bt BT_SEL 0    &bt BT_CLR      &to MOUSE                           &kp LSHIFT  &kp LBKT        &kp RBKT        &kp SQT
                         &none       &bt BT_SEL 1    &out OUT_TOG    &studio_unlock                      &to BASE    &kp GRAVE       &kp CAPS        &kp SEMI
                                                                     &bootloader                         &bootloader
             >;
         };
 
-        extra1 {
-            status = "reserved";
+        /* Mouse
+        ┏━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┓          ┏━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┓
+        ┃    F1   ┃    F2   ┃   F3    ┃  VOL+   ┃   MUTE  ┃          ┃  NONE   ┃  NONE   ┃  NONE   ┃  NONE   ┃  NONE   ┃
+        ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+        ┃    F4   ┃    F5   ┃    F6   ┃  VOL-   ┃    +    ┃          ┃   = +   ┃    7    ┃    8    ┃    9    ┃  ENTER  ┃
+        ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+        ┃    F7   ┃    F8   ┃    F9   ┃   \ |   ┃  - _    ┃          ┃    .    ┃    4    ┃    5    ┃    6    ┃   BSPC  ┃
+        ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+        ┃   F10   ┃   F11   ┃   F12   ┃    /    ┃    *    ┃          ┃    0    ┃    1    ┃    2    ┃    3    ┃   ESC   ┃
+        ┗━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┛
+                  ┃  NONE   ┃  NONE   ┃  NONE   ┃ TO BASE ┃          ┃  SHIFT  ┃   {     ┃     }   ┃    '    ┃
+                  ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫          ┣━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━╋━━━━━━━━━┫
+                  ┃  NONE   ┃  NONE   ┃  NONE   ┃  STUDIO ┃          ┃   BASE  ┃   ` ~   ┃   CAPS  ┃    ;    ┃
+                  ┗━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┣━━━━━━━━━┫          ┣━━━━━━━━━┫━━━━━━━━━┻━━━━━━━━━┻━━━━━━━━━┛
+                                                ┃  BOOT   ┃          ┃   BOOT  ┃
+                                                ┗━━━━━━━━━┛          ┗━━━━━━━━━┛
+        */
+
+        mouse {
+            label = "Mouse";
+            bindings = <
+                &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
+                &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
+                &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
+                &kp LSHFT   &kp X           &kp C           &kp V           &none                           &none       &none           &none           &none           &none
+                            &kp ESC         &none           &none           &kp LCTRL                       &mkp RCLK   &none           &none           &none
+                            &kp LALT        &none           &none           &to BASE                        &mkp LCLK   &none           &none           &none
+                                                                            &kp TAB                         &mkp MCLK
+            >;
         };
 
         extra2 {
