@@ -22,7 +22,7 @@
             compatible = "zmk,input-split";
             reg = <0>;
             status = "disabled";
-			input-processors = <&zip_temp_layer 2 2000>;
+			//input-processors = <&zip_temp_layer 2 2000>;
 			//automouse-layer = <2>;
         };
     };
@@ -31,7 +31,12 @@
         compatible = "zmk,input-listener";
         status = "disabled";
         device = <&input_split_right0>;
-		input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)> , <&zip_xy_scaler 3 2> , <&zip_x_scaler 2 1>; // Swaps X and Y, scales x and y by 3/2 and then x only by 2x
+		// Swaps X and Y, scales x and y by 3/2 and then x only by 2x
+		input-processors = 
+			<&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)> , 
+			<&zip_xy_scaler 3 2> , 
+			<&zip_x_scaler 2 1> , 
+			<&zip_temp_layer 2 2000>; 
     };
 
 	default_transform: keymap_transform_0 {
