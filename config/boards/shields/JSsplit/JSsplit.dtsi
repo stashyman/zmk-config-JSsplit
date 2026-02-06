@@ -21,6 +21,7 @@
             compatible = "zmk,input-split";
             reg = <0>;
             status = "disabled";
+			automouse-layer = <2>;
         };
     };
 
@@ -29,7 +30,6 @@
         status = "disabled";
         device = <&input_split_right0>;
 		input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)> , <&zip_xy_scaler 3 2> , <&zip_x_scaler 2 1>; // Swaps X and Y, scales x and y by 3/2 and then x only by 2x
-		automouse-layer = <2>;
     };
 
 	default_transform: keymap_transform_0 {
