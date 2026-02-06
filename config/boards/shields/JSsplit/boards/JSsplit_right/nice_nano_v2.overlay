@@ -44,7 +44,6 @@
         compatible = "zmk,pimoroni-pim447";
         reg = <0xA>;
         int-gpios = <&gpio1 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        //automouse-layer = <2>;
         //pim447_disable_sleep; //see if this disables the sleeping of the right
     };
 };
