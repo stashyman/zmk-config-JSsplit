@@ -21,7 +21,8 @@
             compatible = "zmk,input-split";
             reg = <0>;
             status = "disabled";
-			automouse-layer = <2>;
+			input-processors = <&zip_temp_layer 2 2000>;
+			//automouse-layer = <2>;
         };
     };
 
