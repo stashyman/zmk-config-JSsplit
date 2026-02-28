@@ -94,4 +94,7 @@ config I2C
 #config ZMK_PIMORONI_PIM447
 #    default y
 
+config ZMK_TRACKBALL_PIM447
+    default y
+
 endif
