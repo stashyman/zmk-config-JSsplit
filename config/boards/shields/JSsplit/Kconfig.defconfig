@@ -97,4 +97,7 @@ config I2C
 config ZMK_TRACKBALL_PIM447
     default y
 
+config ZMK_BEHAVIOR_TRACKBALL_MODE
+    default y
+
 endif

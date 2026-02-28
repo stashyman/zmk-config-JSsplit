@@ -122,7 +122,7 @@
                 &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
                 &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
                 &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
-                &kp LSHFT   &kp X           &kp C           &kp V           &none                           &none       &none           &none           &none           &none
+                &kp LSHFT   &kp X           &kp C           &kp V           &none                           &pim447bh MOVE_TOGGLE       &none           &none           &none           &none
                             &kp ESC         &none           &none           &kp LCTRL                       &mkp RCLK   &none           &none           &none
                             &kp LALT        &none           &none           &to BASE                        &mkp LCLK   &none           &none           &none
                                                                             &kp TAB                         &mkp MCLK
