@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/mouse.h>
-/*#include <dt-bindings/behavior_pim447.h> - this is for my driver*/
 
 #define BASE 0
 #define NUM 1
@@ -16,21 +15,6 @@
 
 / {
     
-   behaviors {
-        pim447bh: pim447bh {
-            /*compatible = "zmk,behavior-pim447";*/
-            #binding-cells = <1>;
-
-            /* This is added from the original user docs, also changed the mode on mouse layer */
-            compatible = "zmk,behavior-trackball-mode";
-            default-mode = <0>;    /* 0=move, 1=scroll */
-            /* Optional LED colors for each mode (see trackball_pim447.h) */
-            led-mode-move = <2>;   /* Green (LED_GREEN) */
-            led-mode-scroll = <3>; /* Blue (LED_BLUE) */
-            
-        };
-        
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -121,7 +105,7 @@
                 &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
                 &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
                 &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
-                &kp LSHFT   &kp X           &kp C           &kp V           &none                           &pim447bh MOVE_TOGGLE       &none           &none           &none           &none
+                &kp LSHFT   &kp X           &kp C           &kp V           &none                           &pim447bh PIM447_TOGGLE_MODE       &none           &none           &none           &none
                             &kp ESC         &none           &none           &kp LCTRL                       &mkp RCLK   &none           &none           &none
                             &kp LALT        &none           &none           &to BASE                        &mkp LCLK   &none           &none           &none
                                                                             &kp TAB                         &mkp MCLK
