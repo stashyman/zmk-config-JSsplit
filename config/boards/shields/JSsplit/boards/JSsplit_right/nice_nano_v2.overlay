@@ -37,9 +37,9 @@
 };
 
 // devices on i2c0
-
+// was pimoroni_pim447: input_device_right0: input_device_right0@A {
 &i2c0 {
-    pimoroni_pim447: input_device_right0: input_device_right0@A {
+    trackball_pim447: input_device_right0: input_device_right0@A {
         status = "okay";
         //compatible = "zmk,pimoroni-pim447"; //uncomment this row to get working for my driver I use before - 2-27-2026
         compatible = "pimoroni,trackball_pim447"; //this is for new driver
