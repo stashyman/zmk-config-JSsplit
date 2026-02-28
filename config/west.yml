@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/Genteure
     - name: stashyman
       url-base: https://github.com/stashyman/
+    - name: scybin
+      url-base: https://github.com/scybin
       
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
@@ -25,9 +27,16 @@ manifest:
     #  remote: genteure
       #revision: 38e1297f87c4a4306633356573ae8673dc7e9ecc
     #  revision: 3d09ddb19dbf8482d0bb67bb8f6d145c4b997685
+
+    ###### This is the driver that I was using, uncomment to make work #####
+    #- name: zmk-driver-pim447                   # <--- and these
+    #  remote: stashyman                         # <---
+    #  revision: main                            # <---
+    
+    ###### Trying this driver out - 2/27/2026 #####
     - name: zmk-driver-pim447                   # <--- and these
-      remote: stashyman                         # <---
-      revision: main                            # <---
+      remote: scybin                            # <---
+      revision: master                          # <---
 
   self:
     path: config
