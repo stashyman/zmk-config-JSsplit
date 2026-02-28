@@ -34,9 +34,10 @@
 		// Swaps X and Y, scales x and y by 3/2 and then x only by 2x
 		input-processors = 
 			<&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_XY_SWAP)> , 
-			<&zip_xy_scaler 3 2> , 
+			<&zip_xy_scaler 10 1> , 
 			<&zip_x_scaler 2 1> , 
 			<&zip_temp_layer 2 2000>; 
+		//for old driver <&zip_xy_scaler 3 2>
     };
 
 	default_transform: keymap_transform_0 {

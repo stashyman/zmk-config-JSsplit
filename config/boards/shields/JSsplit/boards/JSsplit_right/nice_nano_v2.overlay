@@ -37,7 +37,7 @@
 };
 
 // devices on i2c0
-// was pimoroni_pim447: input_device_right0: input_device_right0@A {
+// was pimoroni_pim447: input_device_right0: input_device_right0@A { for my driver
 &i2c0 {
     trackball_pim447: input_device_right0: input_device_right0@A {
         status = "okay";
@@ -47,6 +47,8 @@
         int-gpios = <&gpio1 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         //pim447_disable_sleep; //see if this disables the sleeping of the right
 
+
+        //Everything below this is for the new driver
         sensitivity = <255>;  /* Range: 1-255 */
         move-factor = <5>;   /* Range: 1-10, scales cursor movement speed */
         scroll-factor = <1>; /* Range: 1-10, scales scrolling speed */
