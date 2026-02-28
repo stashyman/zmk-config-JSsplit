@@ -44,7 +44,7 @@
         //compatible = "zmk,pimoroni-pim447"; //uncomment this row to get working for my driver I use before - 2-27-2026
         compatible = "pimoroni,trackball_pim447"; //this is for new driver
         reg = <0xA>;
-        int-gpios = <&gpio1 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        //int-gpios = <&gpio1 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // Trying to deactivate the int pin
         //pim447_disable_sleep; //see if this disables the sleeping of the right
 
 
