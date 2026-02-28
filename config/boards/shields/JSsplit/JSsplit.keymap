@@ -18,7 +18,7 @@
     
    behaviors {
         pim447bh: pim447bh {
-            compatible = "zmk,behavior-pim447";
+            /*compatible = "zmk,behavior-pim447";*/
             #binding-cells = <1>;
 
             /* This is added from the original user docs, also changed the mode on mouse layer */
@@ -121,7 +121,7 @@
                 &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
                 &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
                 &none       &none           &none           &none           &none                           &none       &none           &none           &none           &none
-                &kp LSHFT   &kp X           &kp C           &kp V           &none                           &none     &none           &none           &none           &none
+                &kp LSHFT   &kp X           &kp C           &kp V           &none                           &pim447bh MOVE_TOGGLE       &none           &none           &none           &none
                             &kp ESC         &none           &none           &kp LCTRL                       &mkp RCLK   &none           &none           &none
                             &kp LALT        &none           &none           &to BASE                        &mkp LCLK   &none           &none           &none
                                                                             &kp TAB                         &mkp MCLK
