@@ -49,7 +49,7 @@
 
 
         //Everything below this is for the new driver
-        sensitivity = <255>;  /* Range: 1-255 */
+        sensitivity = <177>;  /* Range: 1-255 */
         move-factor = <5>;   /* Range: 1-10, scales cursor movement speed */
         scroll-factor = <1>; /* Range: 1-10, scales scrolling speed */
         
