@@ -49,8 +49,8 @@
 
 
         //Everything below this is for the new driver
-        sensitivity = <177>;  /* Range: 1-255 */
-        move-factor = <5>;   /* Range: 1-10, scales cursor movement speed */
+        sensitivity = <88>;  /* Range: 1-255 */
+        move-factor = <2>;   /* Range: 1-10, scales cursor movement speed */
         scroll-factor = <1>; /* Range: 1-10, scales scrolling speed */
         
         /* Optional LED color (RGB values 0-255) */
