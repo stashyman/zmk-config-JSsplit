@@ -71,8 +71,8 @@
                 &kp F4  &kp F5      &kp F6          &kp C_VOL_DN    &kp PLUS                            &kp EQUAL   &kp N7          &kp N8          &kp N9          &kp ENTER
                 &kp F7  &kp F8      &kp F9          &kp BSLH        &kp MINUS                           &kp DOT     &kp N4          &kp N5          &kp N6          &kp BSPC
                 &kp F10 &kp F11     &kp F12         &kp KP_SLASH    &kp KP_ASTERISK                     &kp N0      &kp N1          &kp N2          &kp N3          &kp ESC
-                        &none       &none           &none           &to BASE                            &kp LSHIFT  &kp LBKT        &kp RBKT        &kp SQT
-                        &none       &none           &none           &studio_unlock                      &to BASE    &kp GRAVE       &kp CAPS        &kp SEMI
+                        &none       &none           &none           &to BASE                            &kp LSHIFT  &kp SQT         &kp LBKT        &kp RBKT
+                        &none       &none           &none           &studio_unlock                      &to BASE    &kp SEMI        &kp CAPS        &kp GRAVE
                                                                     &bootloader                         &bootloader
             >;
         };
