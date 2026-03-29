@@ -85,20 +85,19 @@ endif
 
 # ---------------------
 # Kconfig for shield "jssplit_right" with board "nice_nano_v2"
-# To enable the mouse uncomment lines 90,92,93,96,97,104
 # ---------------------
-#if BOARD_NICE_NANO_V2 && SHIELD_JSSPLIT_RIGHT
+if BOARD_NICE_NANO_V2 && SHIELD_JSSPLIT_RIGHT
 
-#config I2C
-#    default y
+config I2C
+    default y
 
 #--This is for My Driver - pre 3-1-2026
-#config ZMK_PIMORONI_PIM447
-#    default y
+config ZMK_PIMORONI_PIM447
+    default y
 
 #--This one is for new driver - 3-1-2026
 #config ZMK_TRACKBALL_PIM447
 #    default y
 
 
-#endif
+endif
